@@ -16,7 +16,6 @@ import common.util.EMailHandler;
 import common.util.IOHelper;
 import common.util.Logger;
 import common.util.Settings;
-import p.ds.outputers.DServerOutput;
 
 public class FilesHandler {
 
@@ -28,14 +27,23 @@ public class FilesHandler {
 	public void start() {
 		Logger.info("\r\nStart scanning... ");
 		File[] files = new File(Settings.getInstance().getDir()).listFiles(filter);
-		List<DataEnity> sendList = new ArrayList<>();
+		//		List<DataEnity> sendList = new ArrayList<>();
 		List<File> newFilesList = new ArrayList<>();
 
 		if (files != null) {
+			MultiSheetOutput session = null;
+
 			for (File file : files) {
 				if (isNew(file)) {
 					List<DataEnity> parsingResult = parseFile(file);
-					sendList.addAll(parsingResult);
+					if (!parsingResult.isEmpty()) {
+						if (session == null) {
+							session = new MultiSheetOutput();
+						}
+						send(session, parsingResult);
+					}
+
+					//					sendList.addAll(parsingResult);
 					newFilesList.add(file);
 				}
 			}
@@ -45,9 +53,9 @@ public class FilesHandler {
 				saveLastModifiedProperty();
 			}
 
-			if (!sendList.isEmpty()) {
-				send(sendList);
-			}
+			//			if (!sendList.isEmpty()) {
+			//				send(sendList);
+			//			}
 
 			if (!newFilesList.isEmpty()) {
 				Logger.info("Sending email letters... count: " + newFilesList.size());
@@ -62,9 +70,9 @@ public class FilesHandler {
 		}
 	}
 
-	private void send(List<DataEnity> sendList) {
+	private void send(MultiSheetOutput session, List<DataEnity> sendList) {
 		Logger.info("Sending data...");
-		session = new DServerOutput();
+		//		session = new DServerOutput();
 		for (DataEnity entity : sendList) {
 			session.sendData(entity.getField(), entity.getName(), entity.getValue());
 		}
@@ -101,7 +109,7 @@ public class FilesHandler {
 				String[] columns = line.split(";");
 
 				for (int j = 1; j < columns.length; j++) {
-					String value = columns[j];
+					String value = columns[j].replaceAll(",", ".");
 					if (j < fields.length) {
 						String name = columns[0];
 						String field = fields[j];
@@ -149,7 +157,7 @@ public class FilesHandler {
 
 	private long lastModified;
 	private long newLastModified;
-	private DServerOutput session;
+	//	private DServerOutput session;
 
 	private FileFilter filter = new FileFilter() {
 		public boolean accept(File file) {

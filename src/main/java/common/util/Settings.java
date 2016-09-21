@@ -27,6 +27,9 @@ public class Settings {
 			mask = property.getProperty("main.mask");
 			Logger.info("File mask is set to <" + mask + ">");
 
+			sheet = property.getProperty("main.sheet");
+			Logger.info("Sheet is set to <" + sheet + ">");
+
 			encoding = property.getProperty("main.encoding");
 			Logger.info("Encoding is set to <" + encoding + ">");
 
@@ -37,7 +40,7 @@ public class Settings {
 			emailFrom = property.getProperty("email.from");
 			emailTitle = property.getProperty("email.title");
 			emailText = property.getProperty("email.text");
-			
+
 			smtpAuth = property.getProperty("mail.smtp.auth");
 			smtpStarttlsEnable = property.getProperty("mail.smtp.starttls.enable");
 			smtpHost = property.getProperty("mail.smtp.host");
@@ -116,12 +119,17 @@ public class Settings {
 		return smtpPassword;
 	}
 
+	public String getSheet() {
+		return sheet;
+	}
+
 	private static Settings instance = null;
 
 	private String dir;
 	private String mask;
 	private String encoding;
 	private int timeout;
+	private String sheet;
 
 	private String emailTo;
 	private String emailFrom;
