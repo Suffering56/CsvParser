@@ -10,7 +10,7 @@ public class MultiSheetOutput {
 	}
 
 	public void sendData(String field, String ticker, String value) {
-		//		Logger.info("Sending to onlinx: " + ticker + " " + field + " " + value);
+		//				Logger.info("Sending to onlinx: " + ticker + " " + field + " " + value);
 		//		System.out.println("Sending to onlinx: " + Settings.getInstance().getSheet() + " " + ticker + " " + field + " " + value);
 		//		session.sendData(field, ticker, value);
 		multiSheetSession.sendData(Settings.getInstance().getSheet().trim(), field.trim(), ticker.trim(), value.trim());

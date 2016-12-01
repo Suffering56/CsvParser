@@ -1,0 +1,132 @@
+09:07:40.084	INFO	TestDevision:Reading settings...
+09:07:40.084	INFO	TestDevision:Scanned directory is set to <C:/Users/prog08/Desktop/reports>
+09:07:40.084	INFO	TestDevision:File mask is set to <report>
+09:07:40.084	INFO	TestDevision:Sheet is set to <sheet_example>
+09:07:40.084	INFO	TestDevision:InstrumentColumnIndex is set to <0>
+09:07:40.085	INFO	TestDevision:PacketSize is set to <100>
+09:07:40.085	INFO	TestDevision:PacketDelay is set to <3000>
+09:07:40.085	INFO	TestDevision:Encoding is set to <windows-1251>
+09:07:40.085	INFO	TestDevision:Scanning timeout is set to <10> seconds
+09:07:40.085	INFO	TestDevision:Settings successfully extracted.
+
+09:07:40.089	INFO	TestDevision:Variable "lastModified" successfully extracted. value = 0
+
+09:07:40.090	INFO	TestDevision:
+Start scanning... 
+09:07:40.090	INFO	TestDevision:Parsing new file: report_F270_MMVB_bonds_20160907.csv ...
+09:07:40.279	INFO	TestDevision:Sending data...
+09:07:40.280	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:43.280	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:46.281	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:49.281	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:52.282	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:55.283	INFO	TestDevision:Sent packet. Sleep: 3000
+09:07:58.284	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:01.284	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:04.285	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:07.285	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:10.286	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:13.286	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:16.286	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:19.287	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:22.288	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:25.288	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:28.289	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:31.289	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:34.289	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:37.289	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:40.291	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:43.291	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:46.291	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:49.292	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:52.292	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:55.292	INFO	TestDevision:Sent packet. Sleep: 3000
+09:08:58.293	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:01.293	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:04.294	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:07.294	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:10.295	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:13.295	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:16.296	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:19.297	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:22.299	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:25.300	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:28.300	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:31.300	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:34.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:37.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:40.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:43.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:46.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:49.301	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:52.302	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:55.302	INFO	TestDevision:Sent packet. Sleep: 3000
+09:09:58.302	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:01.302	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:04.303	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:07.303	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:10.304	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:13.305	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:16.305	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:19.305	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:22.305	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:25.306	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:28.306	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:31.306	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:34.307	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:37.307	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:40.307	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:43.308	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:46.308	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:49.309	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:52.309	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:55.310	INFO	TestDevision:Sent packet. Sleep: 3000
+09:10:58.310	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:01.311	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:04.311	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:07.311	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:10.311	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:13.311	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:16.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:19.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:22.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:25.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:28.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:31.312	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:34.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:37.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:40.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:43.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:46.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:49.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:52.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:55.313	INFO	TestDevision:Sent packet. Sleep: 3000
+09:11:58.314	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:01.314	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:04.314	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:07.314	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:10.314	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:13.315	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:16.315	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:19.316	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:22.316	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:25.317	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:28.317	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:31.318	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:34.318	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:37.318	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:40.321	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:43.321	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:46.321	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:49.321	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:52.322	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:55.323	INFO	TestDevision:Sent packet. Sleep: 3000
+09:12:58.323	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:01.323	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:04.323	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:07.324	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:10.324	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:13.324	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:16.324	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:19.324	INFO	TestDevision:Sent packet. Sleep: 3000
+09:13:22.325	INFO	TestDevision:Sent packet. Sleep: 3000

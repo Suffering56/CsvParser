@@ -30,11 +30,20 @@ public class Settings {
 			sheet = property.getProperty("main.sheet");
 			Logger.info("Sheet is set to <" + sheet + ">");
 
+			instrumentColumnIndex = Integer.valueOf(property.getProperty("main.instrument_column_index"));
+			Logger.info("InstrumentColumnIndex is set to <" + instrumentColumnIndex + ">");
+
+			packetSize = Integer.valueOf(property.getProperty("main.packet_size"));
+			Logger.info("PacketSize is set to <" + packetSize + ">");
+
+			packetDelay = Integer.valueOf(property.getProperty("main.packet_delay"));
+			Logger.info("PacketDelay is set to <" + packetDelay + ">");
+
 			encoding = property.getProperty("main.encoding");
 			Logger.info("Encoding is set to <" + encoding + ">");
 
-			timeout = Integer.valueOf(property.getProperty("main.timeout"));
-			Logger.info("Timeout is set to <" + timeout + "> seconds");
+			scanTimeout = Integer.valueOf(property.getProperty("main.scan_timeout"));
+			Logger.info("Scanning timeout is set to <" + scanTimeout + "> seconds");
 
 			emailTo = property.getProperty("email.to");
 			emailFrom = property.getProperty("email.from");
@@ -75,8 +84,12 @@ public class Settings {
 		return encoding;
 	}
 
-	public int getTimeout() {
-		return timeout;
+	public int getInstrumentColumnIndex() {
+		return instrumentColumnIndex;
+	}
+
+	public int getScanTimeout() {
+		return scanTimeout;
 	}
 
 	public String getEmailTo() {
@@ -123,13 +136,24 @@ public class Settings {
 		return sheet;
 	}
 
+	public int getPacketSize() {
+		return packetSize;
+	}
+
+	public int getPacketDelay() {
+		return packetDelay;
+	}
+
 	private static Settings instance = null;
 
 	private String dir;
 	private String mask;
 	private String encoding;
-	private int timeout;
+	private int scanTimeout;
 	private String sheet;
+	private int instrumentColumnIndex;
+	private int packetSize;
+	private int packetDelay;
 
 	private String emailTo;
 	private String emailFrom;

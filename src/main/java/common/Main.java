@@ -18,7 +18,7 @@ public class Main {
 
 	private static void sleep() {
 		try {
-			Thread.sleep(Settings.getInstance().getTimeout() * 1000);
+			Thread.sleep(Settings.getInstance().getScanTimeout() * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -27,7 +27,7 @@ public class FilesHandler {
 	public void start() {
 		Logger.info("\r\nStart scanning... ");
 		File[] files = new File(Settings.getInstance().getDir()).listFiles(filter);
-		//		List<DataEnity> sendList = new ArrayList<>();
+		// List<DataEnity> sendList = new ArrayList<>();
 		List<File> newFilesList = new ArrayList<>();
 
 		if (files != null) {
@@ -43,7 +43,7 @@ public class FilesHandler {
 						send(session, parsingResult);
 					}
 
-					//					sendList.addAll(parsingResult);
+					// sendList.addAll(parsingResult);
 					newFilesList.add(file);
 				}
 			}
@@ -53,17 +53,21 @@ public class FilesHandler {
 				saveLastModifiedProperty();
 			}
 
-			//			if (!sendList.isEmpty()) {
-			//				send(sendList);
-			//			}
+			// if (!sendList.isEmpty()) {
+			// send(sendList);
+			// }
 
 			if (!newFilesList.isEmpty()) {
-				Logger.info("Sending email letters... count: " + newFilesList.size());
-				EMailHandler eMailHandler = new EMailHandler();
-				for (File file : newFilesList) {
-					eMailHandler.sendEmail(file);
+				if (Settings.getInstance().getEmailTo() != null && !Settings.getInstance().getEmailTo().isEmpty()) {
+					Logger.info("Sending email letters... count: " + newFilesList.size());
+					EMailHandler eMailHandler = new EMailHandler();
+					for (File file : newFilesList) {
+						eMailHandler.sendEmail(file);
+					}
+					Logger.info("Sending email letters is completed");
+				} else {
+					Logger.info("Empty param \"email.to\"! Mail will not be sent. \r\n");
 				}
-				Logger.info("Sending email letters is completed");
 			}
 		} else {
 			Logger.error("Error while scanning directory: " + Settings.getInstance().getDir() + ". This directory is null");
@@ -72,9 +76,20 @@ public class FilesHandler {
 
 	private void send(MultiSheetOutput session, List<DataEnity> sendList) {
 		Logger.info("Sending data...");
-		//		session = new DServerOutput();
+		// session = new DServerOutput();
+		int counter = 0;
 		for (DataEnity entity : sendList) {
+			if (counter >= Settings.getInstance().getPacketSize()) {
+				counter = 0;
+				try {
+					Logger.info("Sent packet. Sleep: " + Settings.getInstance().getPacketDelay());
+					Thread.sleep(Settings.getInstance().getPacketDelay());
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 			session.sendData(entity.getField(), entity.getName(), entity.getValue());
+			counter++;
 		}
 		Logger.info("Data sending is completed");
 	}
@@ -94,6 +109,7 @@ public class FilesHandler {
 
 		List<DataEnity> sendList = new ArrayList<>();
 		List<String> lines = null;
+		int instrumentColumnIndex = Settings.getInstance().getInstrumentColumnIndex();
 
 		try {
 			lines = Files.readAllLines(file.toPath(), Charset.forName(Settings.getInstance().getEncoding()));
@@ -106,14 +122,16 @@ public class FilesHandler {
 
 			for (int i = 1; i < lines.size(); i++) {
 				String line = lines.get(i);
-				String[] columns = line.split(";");
+				String[] values = line.split(";");
 
-				for (int j = 1; j < columns.length; j++) {
-					String value = columns[j].replaceAll(",", ".");
-					if (j < fields.length) {
-						String name = columns[0];
-						String field = fields[j];
-						sendList.add(new DataEnity(name, field, value));
+				for (int j = 0; j < values.length; j++) {
+					if (j != instrumentColumnIndex) {
+						String value = values[j].replaceAll(",", ".");
+						if (j < fields.length) {
+							String name = values[instrumentColumnIndex];
+							String field = fields[j];
+							sendList.add(new DataEnity(name, field, value));
+						}
 					}
 				}
 			}
@@ -157,7 +175,7 @@ public class FilesHandler {
 
 	private long lastModified;
 	private long newLastModified;
-	//	private DServerOutput session;
+	// private DServerOutput session;
 
 	private FileFilter filter = new FileFilter() {
 		public boolean accept(File file) {
